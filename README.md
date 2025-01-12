@@ -11,3 +11,27 @@ Este repositorio contiene los cuatro cuadernos desarrollados para llevar a cabo 
 - **Cuaderno sobre XAI** (TFG_03_Explicabilidad.ipynb). Aplicamos técnicas de explicabilidad post hoc al modelo seleccionado en el anterior cuaderno. Los métodos empleados son tanto globales como locales, pero todos son model-agnostic, es decir, independientes del tipo de modelo. En este cuaderno se incluye la *permutation feature importance*, *Partial Dependence Plot* (PDP), *Individual Conditional Expectation* (ICE), LIME (*Local Interpretable Model-agnostic Explanations*), DiCE (*Diverse Counterfactual Explanations*) y SHAP (*Shapley Additive Explanations*).
 
 - **Cuaderno sobre UQ** (TFG_04_Incertidumbre.ipynb). En este último Notebook se calibra el modelo mediante Predicción Conforme. Concretamente, se utiliza *Venn-ABERS Conformal Prediction* para generar probabilidades bien calibradas e intervalos de predicción para el diagnóstico de síndrome metabólico. También se visualizan y calculan las métricas apropiadas para poder medir la calidad de la calibración. Finalmente, se aplican técnicas de XAI local, especialmente en aquellas predicciones menos confiables.
+
+
+## Requirements
+
+Los Jupyter Notebooks están desarrollados en Python 3.10. Las librerías utilizadas son:
+
++ NumPy (v. 1.26.4)
++ Pandas (v. 1.5.3)
++ Matplotlib (v. 3.10.0) y Seaborn (v. 0.13.2)
++ Scikit-learn (v. 1.5.2)
++ XGBoost (v. 2.1.3)
++ CatBoost (v. 1.2.7)
++ LightGBM (v. 4.5.0)
++ SHAP (v. 0.46.0)
++ LIME (v. 0.2.0.1)
++ DiCE (v. 0.11).
+
+Además de la implementación IVAP de VennABERS Predictor (v. 0.2) de [este repositorio](https://github.com/ptocca/VennABERS).
+
+`pip install pandas numpy==1.26.4 matplotlib seaborn scikit-learn==1.5.2 xgboost catboost lightgbm lime dice-ml shap`
+
+o
+
+`pip install -r requirements.txt`
